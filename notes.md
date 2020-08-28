@@ -1,17 +1,17 @@
 TO DO LIST
 
-[ ] Create Input Form that Collects The following
+[X] Create Input Form that Collects The following
     Employee First Name
     Last Name
     ID Number
     Job Title
     Annual Salary
 
-Create a Submit Button
+[X]Create a Submit Button
 
 Submit Button Needs to Do The Following
-    [] Collects Form Input info
-    [] Stores in an array | let monthlyCosts = [];
+    [X] Collects Form Input info
+    [X] Stores in an array | let monthlyCosts = [];
     [] Append Monthly Costs to DOM
     [] Clear Input Fields
 
