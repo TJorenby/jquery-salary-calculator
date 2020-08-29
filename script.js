@@ -4,6 +4,17 @@ $(document).ready(onReady);
 
 let monthlyCosts = [];
 
+function addMonthlyCosts(){
+    console.log('in addMonthlyCosts');
+    let totalMonthlyCosts = 0;
+    for (let i=0; i<monthlyCosts.length; i++){
+        totalMonthlyCosts += Number(monthlyCosts[i].annualSalary);
+    }
+    let el = $('#totalMonthlyCost');
+    el.empty();
+    el.append(totalMonthlyCosts);
+}
+
 function onReady(){
     $('#submitBtn').on('click', $('#submitBtn'), inputData);
 
@@ -26,5 +37,14 @@ function onReady(){
             `);
         }
 
+        $('.firstNameInput').val(''),
+        $('.lastNameInput').val(''),
+        $('.idNumberInput').val(''),
+        $('.jobTitleInput').val(''),
+        $('.annualSalaryInput').val('')
+
+        addMonthlyCosts();
     }
+    
+    
 }

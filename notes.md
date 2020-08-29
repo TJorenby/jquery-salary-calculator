@@ -13,11 +13,11 @@ Submit Button Needs to Do The Following
     [X] Collects Form Input info
     [X] Stores in an array | let monthlyCosts = [];
     [X] Append Monthly Costs to DOM
-    [] Clear Input Fields
+    [X] Clear Input Fields
 
 
-[] Calculate Total Monthly Costs and append to DOM
-    If total Monthly Cost > $20k, add RED background color to Montly Cost
+[X] Calculate Total Monthly Costs and append to DOM
+    []If total Monthly Cost > $20k, add RED background color to Montly Cost
 
 [] Create a Delete Button that removes employee from DOM
     **Optional -- Also remove salary from Total Montly costs
