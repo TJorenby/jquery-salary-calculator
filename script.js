@@ -19,6 +19,12 @@ function onReady(){
         monthlyCosts.push(employeeProfile);
         console.log(monthlyCosts);
 
+        for (let i=0; i<monthlyCosts.length; i++){
+            $('#employeeProfileOutput').append(`
+            <li class="employeeOutput">${monthlyCosts[i].firstName} ${monthlyCosts[i].lastName}  ${monthlyCosts[i].idNumber} ${monthlyCosts[i].jobTitle} ${monthlyCosts[i].           annualSalary}</li>
+            <button class="deleteBtn">Delete</button>
+            `);
+        }
 
     }
 }

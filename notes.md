@@ -12,7 +12,7 @@ TO DO LIST
 Submit Button Needs to Do The Following
     [X] Collects Form Input info
     [X] Stores in an array | let monthlyCosts = [];
-    [] Append Monthly Costs to DOM
+    [X] Append Monthly Costs to DOM
     [] Clear Input Fields
 
 

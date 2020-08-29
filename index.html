@@ -15,9 +15,9 @@
         <h2>Add Employee</h2>
         <input type="text" class ="firstNameInput" placeholder="First Name"/>
         <input type="text" class ="lastNameInput" placeholder="Last Name"/>
-        <input type="text" class ="idNumberInput" placeholder="ID Number"/>
+        <input type="number" class ="idNumberInput" placeholder="ID Number"/>
         <input type="text" class ="jobTitleInput" placeholder="Job Title"/>
-        <input type="text" class ="annualSalaryInput" placeholder="Annual Salary"/>
+        <input type="number" class ="annualSalaryInput" placeholder="Annual Salary"/>
         <button id="submitBtn">Submit</button>
     </div>
 
@@ -32,7 +32,12 @@
                 <tr class="displayIDNumber"> ID Number</tr>
                 <tr class="displayJobTitle"> Job Title</tr>
                 <tr class="displayAnnualSalary"> Annual Salary</tr>
+                
             </table>
+
+            <ul id="employeeProfileOutput">
+                <li class="employeeOutput"></li>
+            </ul>
 
         </div>
         
