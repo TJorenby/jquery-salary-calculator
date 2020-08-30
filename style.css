@@ -5,3 +5,8 @@ body {
 .employeeOutput{
     display: inline-block;
 }
+
+.addRedBackground{ 
+    border: 1000px;
+    background-color: red;
+}

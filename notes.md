@@ -17,10 +17,10 @@ Submit Button Needs to Do The Following
 
 
 [X] Calculate Total Monthly Costs and append to DOM
-    []If total Monthly Cost > $20k, add RED background color to Montly Cost
+    [X]If total Monthly Cost > $20k, add RED background color to Monthly Cost
 
-[] Create a Delete Button that removes employee from DOM
-    **Optional -- Also remove salary from Total Montly costs
+[X] Create a Delete Button that removes employee from DOM
+    [ ] **Optional -- Also remove salary from Total Montly costs
 
 
 

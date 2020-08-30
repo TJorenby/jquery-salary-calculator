@@ -4,17 +4,24 @@ $(document).ready(onReady);
 
 let monthlyCosts = [];
  
- 
 
 function addMonthlyCosts(){
     console.log('in addMonthlyCosts');
     let totalMonthlyCosts = 0;
+    
     for (let i=0; i<monthlyCosts.length; i++){
-        totalMonthlyCosts += Number(monthlyCosts[i].annualSalary);
+        totalMonthlyCosts += Number((monthlyCosts[i].annualSalary / 12)); // divides the annual salaries by 12 to find monthly cost
     }
+
     let el = $('#totalMonthlyCost');
     el.empty();
-    el.append(totalMonthlyCosts);
+    el.append(Math.round(totalMonthlyCosts)); 
+
+
+     if (totalMonthlyCosts > 20000){
+        el.css("background-color", "red"); // Changes background to RED if monthly costs exceed 20k
+    }
+
 }
 
 
@@ -37,23 +44,15 @@ function displayDataOutput() {
 function onDeleteBtn(){
     console.log('in deleteEmployee'); 
     let el = $('.employeeProfile');
-    $(this).remove(); 
-    el.remove();
-    removeEmployee();
+    $(this).parent().remove(); 
+    
 }
 
-function removeEmployee(){
-    for (let i=0; i<monthlyCosts.length; i++){
-        if ()
-    }
-}
 
 function onReady(){
     $(document).on('click','#submitBtn', inputData);
     $(document).on('click','#deleteBtn', onDeleteBtn); 
     
-    
-
     function inputData(){
         console.log('in inputData');
         let employeeProfile = {
@@ -68,8 +67,6 @@ function onReady(){
         addMonthlyCosts();
         displayDataOutput();
         
-        
-
         $('.firstNameInput').val(''),
         $('.lastNameInput').val(''),
         $('.idNumberInput').val(''),
