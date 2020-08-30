@@ -4,6 +4,7 @@ $(document).ready(onReady);
 
 let monthlyCosts = [];
  
+ 
 
 function addMonthlyCosts(){
     console.log('in addMonthlyCosts');
@@ -16,16 +17,7 @@ function addMonthlyCosts(){
     el.append(totalMonthlyCosts);
 }
 
-function onDeleteBtn(){
-    console.log('in deleteEmployee'); 
-    let el = $('.employeeOutput');
-    let el2 = $('#deleteBtn');
-    $(this).parent();
-    el.remove();
-    el2.remove();
 
-    
-}
 
 function displayDataOutput() {
 
@@ -33,7 +25,7 @@ function displayDataOutput() {
     el.empty();
     for (let i=0; i<monthlyCosts.length; i++){
         el.append(`
-        <div>
+        <div class="employeeProfile">
         <li class="employeeOutput">${monthlyCosts[i].firstName} ${monthlyCosts[i].lastName}  ${monthlyCosts[i].idNumber} ${monthlyCosts[i].jobTitle} ${monthlyCosts[i].annualSalary}</li>
         <button id="deleteBtn">Delete</button>
         </div>
@@ -42,8 +34,24 @@ function displayDataOutput() {
     
 }
 
+function onDeleteBtn(){
+    console.log('in deleteEmployee'); 
+    let el = $('.employeeProfile');
+    $(this).remove(); 
+    el.remove();
+    removeEmployee();
+}
+
+function removeEmployee(){
+    for (let i=0; i<monthlyCosts.length; i++){
+        if ()
+    }
+}
+
 function onReady(){
-    $('#submitBtn').on('click', $('#submitBtn'), inputData);
+    $(document).on('click','#submitBtn', inputData);
+    $(document).on('click','#deleteBtn', onDeleteBtn); 
+    
     
 
     function inputData(){
@@ -71,5 +79,4 @@ function onReady(){
         
     }
     
-    $('#deleteBtn').on('click', onDeleteBtn);  
 }
