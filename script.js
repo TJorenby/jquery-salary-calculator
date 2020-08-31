@@ -3,11 +3,12 @@ $(document).ready(onReady);
 //Global Scope
 
 let monthlyCosts = [];
+let totalMonthlyCosts = 0;
  
 
 function addMonthlyCosts(){
     console.log('in addMonthlyCosts');
-    let totalMonthlyCosts = 0;
+    
     
     for (let i=0; i<monthlyCosts.length; i++){
         totalMonthlyCosts += Number((monthlyCosts[i].annualSalary / 12)); // divides the annual salaries by 12 to find monthly cost
@@ -24,18 +25,20 @@ function addMonthlyCosts(){
 
 }
 
-
-
 function displayDataOutput() {
 
     let el = $('#employeeProfileOutput');
     el.empty();
     for (let i=0; i<monthlyCosts.length; i++){
         el.append(`
-        <div class="employeeProfile">
-        <li class="employeeOutput">${monthlyCosts[i].firstName} ${monthlyCosts[i].lastName}  ${monthlyCosts[i].idNumber} ${monthlyCosts[i].jobTitle} ${monthlyCosts[i].annualSalary}</li>
-        <button id="deleteBtn">Delete</button>
-        </div>
+        <tr class="employeeProfile">
+            <td>${monthlyCosts[i].firstName}</td>
+            <td>${monthlyCosts[i].lastName}</td>
+            <td>${monthlyCosts[i].idNumber}</td>
+            <td>${monthlyCosts[i].jobTitle}</td>
+            <td>${monthlyCosts[i].annualSalary}</td>
+            <td><button id="deleteBtn">Delete</button></td>
+        </tr>
         `);
     }
     
@@ -43,9 +46,7 @@ function displayDataOutput() {
 
 function onDeleteBtn(){
     console.log('in deleteEmployee'); 
-    let el = $('.employeeProfile');
-    $(this).parent().remove(); 
-    
+    $(this).parents(".employeeProfile").remove();  
 }
 
 
@@ -71,9 +72,7 @@ function onReady(){
         $('.lastNameInput').val(''),
         $('.idNumberInput').val(''),
         $('.jobTitleInput').val(''),
-        $('.annualSalaryInput').val('')
-
-        
+        $('.annualSalaryInput').val('')  
     }
     
 }

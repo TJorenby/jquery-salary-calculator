@@ -2,11 +2,17 @@ body {
     background-color: lightgrey
 }
 
-.employeeOutput{
-    display: inline-block;
-}
+
 
 .addRedBackground{ 
     border: 1000px;
     background-color: red;
+}
+
+
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
 }
